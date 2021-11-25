@@ -1,0 +1,20 @@
+
+    <div class="listTitle">
+    <h1>Ironhack Cinema</h1>
+    <h4>Click on the movie to check the showtimes!</h4>
+
+    <div class="movieList">
+    {{#each movies}}
+
+    <div class="movieCard">
+      <img src="{{this.image}}" alt="{{this.name}} photo">
+      <h5>{{this.title}}</h5>
+        <form action="/movies/{{this.id}}" method="post">
+        <button type="submit">See more</button>
+        </form>
+
+    </div>
+
+    {{/each}}
+    </div>
+</div>
